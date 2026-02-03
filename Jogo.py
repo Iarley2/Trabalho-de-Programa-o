@@ -35,8 +35,8 @@ def draw():
     p1body.add(p1head)
     p2body.add(p2head)
 
-    square(p1xy.x, p1xy.y, 3, 'red')
-    square(p2xy.x, p2xy.y, 3, 'blue')
+    square(p1xy.x, p1xy.y, 3, 'purple')
+    square(p2xy.x, p2xy.y, 3, 'orange')
     update()
     ontimer(draw, 50)
 
