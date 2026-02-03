@@ -2,11 +2,11 @@ from turtle import *
 
 from freegames import square, vector
 
-p1xy = vector(-150, 0)
+p1xy = vector(-100, 0)
 p1aim = vector(4, 0)
 p1body = set()
 
-p2xy = vector(150, 0)
+p2xy = vector(100, 0)
 p2aim = vector(-4, 0)
 p2body = set()
 
@@ -24,13 +24,21 @@ def draw():
     p2xy.move(p2aim)
     p2head = p2xy.copy()
 
-    if not inside(p1head) or p1head in p2body or p1head in p1body:
-        print('Player blue wins!')
-        return
+    if p1head in p2body:
+       print('Player blue wins!')
+       return
 
-    if not inside(p2head) or p2head in p1body:
-        print('Player red wins!')
+    if p2head in p1body:
+       print('Player red wins!')
+       return
+    
+    if p1head in p1body:
+        print('Jogador Laranja é vencedor!')
         return
+    
+    if p2head in p1body:
+        print('Jogador Roxo é vencedor!')
+
 
     p1body.add(p1head)
     p2body.add(p2head)
